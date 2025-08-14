@@ -2,6 +2,15 @@
 
 * _
 #+begin_verse
+Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat.
+#+end_verse
+
+#+begin_verse
+test your changes using playwright
+#+end_verse
+
+* _
+#+begin_verse
 Use serena to get familiar with `ai-studio-notification.user.js`.
 #+end_verse
 
