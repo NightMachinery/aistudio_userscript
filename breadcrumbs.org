@@ -4,13 +4,16 @@
 #+begin_verse
 Read claude.md.
 
-Read the userscript file.
+Read the userscript file:
+```
+jscodeshift --silent --transform elider.js --dry --print ai-studio-notification.user.js
+```
 
-Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat.
+Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat. (playwright - Navigate to a URL)
 
 Do NOT inject the whole userscript into the browser, as the userscript is too big and this will take a long time. Evaluate the exact code snippets you need to test only to see the results.
 
-Implement functions to scroll between messages and bind them to alt+up and alt+down. (These hotkeys should work even when the user is inside the main text area.) Send multiple messages to be able to test your scroll code.
+Implement functions to scroll between messages and bind them to alt+up and alt+down. (These hotkeys should work even when the user is inside the main text area.) Send multiple simple messages (like greetings) to be able to test your scroll code.
 #+end_verse
 
 * _
