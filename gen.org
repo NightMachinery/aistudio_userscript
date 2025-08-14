@@ -1,0 +1,6 @@
+#+TITLE: aistudio_userscript
+
+* _
+#+begin_verse
+Use browser mcp to connect to the ai studio website (currently open in the  browser). I need you to write a userscript that shows me a notification when  the model finishes responding in ai studio.
+#+end_verse

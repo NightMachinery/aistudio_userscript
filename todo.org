@@ -1,0 +1,19 @@
+#+TITLE: aistudio_userscript/todo
+
+* move this repo somewhere good
+
+* also create synthetic magical bell sounds using web api
+
+* DONE _
+#+begin_verse
+Allow setting different notification modes for different minumum delays in an object:
+
+{
+ 0: ["bell"],
+ 10: ["bell", "desktop_notif"],
+ 100: ["desktop_notif"],
+}
+
+The code should find the exact duration group and use the modes for that (i.e., should not run 0 delay list when 11 delay).
+#+end_verse
+
