@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         AI Studio Response Notifications
+// @name         Night's AI Studio
 // @namespace    http://tampermonkey.net/
 // @version      1.4
-// @description  Show notifications when AI Studio finishes responding
-// @author       You
+// @description  Show notifications when AI Studio finishes responding, add hotkeys
+// @author       NightMachinery
 // @match        https://aistudio.google.com/*
 // @grant        none
 // ==/UserScript==
@@ -24,8 +24,8 @@
         //   - Bell names from BELL_FUNCTIONS: 'simple-beep', 'double-beep', 'triple-beep', 'chime'
         //   - {speech: 'text to speak'}: Text-to-speech notification
         notificationModesByDuration: {
-            0: ['simple-beep', {speech: 'Gemini Ready!'}],
-            10: ['bell-hp3-star-pickup', 'desktop_notif'],
+            0: ['bell-hp3-star-pickup'],
+            60: ['bell-hp3-star-pickup', 'desktop_notif'],
         }
         
         /* Example configurations:
