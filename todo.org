@@ -4,6 +4,33 @@
 
 * @bug When the screen is too small, the "run" or "stop" text is not shown in the button, and our script fails to detect the proper generation state.
 
+* NO scroll
+#+begin_verse
+Implement functions to scroll between messages and bind them to alt+up and alt+down. (These hotkeys should work even when the user is inside the main text area.) Send multiple simple messages (like greetings) to be able to test your scroll code.
+#+end_verse
+
+** [jalali:1404/05/23/19:08]
+I tested with both gemini-cli and claude-code, and they couldn't code this with the Playwright MCP. The dom was too complex for them.
+
+The UI has two buttons when one scrolls manually which do this. If we could intercept the code that these buttons runs ...
+
+*** _
+This did not work either. The code was obfuscated and BS. I tried copying the whole JS source into the LLM, but it was onver 1m tokens.
+
+#+begin_verse
+I want to know what JavaScript code clicking button in a website inside Chrome does. How can I find the code that the browser runs when I click on that button?
+#+end_verse
+
+#+begin_verse
+1.  Open DevTools: Right-click the button you're interested in and select "Inspect". This will open the DevTools panel and highlight the button's HTML element.
+
+2.  Find Event Listeners: With the button's <button> tag highlighted in the Elements panel, look at the pane on the right. Click on the "Event Listeners" tab.
+
+3.  Locate the 'click' event: Expand the click event category. You'll see a list of all the functions that run when that button is clicked.
+
+4.  Go to the Source: Click on the link next to the listener (it often looks like handler.js:123). Chrome will jump you directly to the exact function in the Sources panel.
+#+end_verse
+
 * NO also create synthetic magical bell sounds using web api
 
 * DONE add hotkeys =cmd+k= to open a new chat by clicking on the new chat button. preserve current implementation of direct url navigation, and choose between the two using a constant =NEW_CHAT_MODE=.
