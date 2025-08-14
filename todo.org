@@ -1,11 +1,11 @@
 #+TITLE: aistudio_userscript/todo
 
+* add hotkeys =cmd+k= to open a new chat
+** =cmd+s= to save the current chat
+
 * move this repo somewhere good
 
 * also create synthetic magical bell sounds using web api
-
-* add hotkeys =cmd+k= to open a new chat
-** =cmd+s= to save the current chat
 
 * DONE _
 #+begin_verse

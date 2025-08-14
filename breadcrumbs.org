@@ -2,6 +2,11 @@
 
 * _
 #+begin_verse
+Use serena to get familiar with `ai-studio-notification.user.js`.
+#+end_verse
+
+* DONE _
+#+begin_verse
 create a dict of bell names to base64 data. start with `bell-hp3-star-pickup`  from file: '/Users/evar/base/music/greencase/HP3/PC Computer - Harry Potter & the Prisoner of Azkaban - Sound Effects/soundeffects.uax/Magic/pickup_star1..blue..wav'. run bash to get base64.
 #+end_verse
 
@@ -12,3 +17,4 @@ AIStudioNotify.ringBell("bell-hp3-star-pickup")
 #+begin_src zsh :eval never
 command base64 -w 0 '/Users/evar/base/music/greencase/HP3/PC Computer - Harry Potter & the Prisoner of Azkaban - Sound Effects/soundeffects.uax/Magic/pickup_star1..blue..wav'
 #+end_src
+

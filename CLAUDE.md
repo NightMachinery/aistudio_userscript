@@ -67,3 +67,13 @@ Notes:
 - **Audio:** Programmatic tones are generated via the Web Audio API (`OscillatorNode` + `GainNode`). The script also includes an embedded base64 WAV (`BELLS['bell-hp3-star-pickup']`).
 - **Speech:** Uses `window.speechSynthesis` with a slightly faster rate for clarity.
 - **Desktop Notifications:** Created via the `Notification` API when permission is `granted`.
+
+# Reading ai-studio-notification.user.js Efficiently (skip base64)
+
+The file contains a very large base64-encoded audio asset embedded in the `BELLS` object, which can overwhelm searches and dumps. Use these approaches to read and navigate the script without losing context:
+
+- Core idea: Treat the `BELLS` object as an opaque blob and exclude it from output when inspecting the file.
+
+## Quick CLI Views (exclude base64)
+- Hide the whole `BELLS` block (start at `const BELLS = {` until the following `};`):
+  - `cat ai-studio-notification.user.js | sd "^\\s*'bell-hp3-star-pickup':.*" "// [ELIDED BASE64 DATA TO REDUCE TOKEN USAGE]"`
