@@ -2,7 +2,15 @@
 
 * _
 #+begin_verse
+Read claude.md.
+
+Read the userscript file.
+
 Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat.
+#+end_verse
+
+* _
+#+begin_verse
 #+end_verse
 
 #+begin_verse

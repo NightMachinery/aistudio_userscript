@@ -142,6 +142,16 @@
         }
     };
 
+    // ============ HOTKEYS ============
+    function handleHotkey(event) {
+        // Check for Cmd+K on Mac or Ctrl+K on other systems
+        if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+            event.preventDefault();
+            log(1, '⌨️ Cmd+K pressed, creating new chat');
+            window.location.href = '/app/prompts/new_chat';
+        }
+    }
+
     // ============ GLOBALS ============
     let isGenerating = false;
     let observer;
@@ -468,6 +478,7 @@
 
         log(2, 'MutationObserver started');
         log(1, 'Monitor started successfully');
+        document.addEventListener('keydown', handleHotkey);
     }
 
     // Wait for page to load, then start monitoring
@@ -489,6 +500,7 @@
         if (observer) {
             observer.disconnect();
         }
+        document.removeEventListener('keydown', handleHotkey);
     });
 
 })();
