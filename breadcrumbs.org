@@ -10,7 +10,7 @@ Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat
 
 Do NOT inject the whole userscript into the browser, as the userscript is too big and this will take a long time. Evaluate the exact code snippets you need to test only to see the results.
 
-Evaluate the code used to save the current chat (setup a chat first). Does it work? If not, troubleshoot. Finally, edit the code in the userscript file.
+Implement functions to scroll between messages and bind them to alt+up and alt+down. (These hotkeys should work even when the user is inside the main text area.) Send multiple messages to be able to test your scroll code.
 #+end_verse
 
 * _
