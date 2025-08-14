@@ -7,12 +7,13 @@ Read claude.md.
 Read the userscript file.
 
 Use the playwright MCP and open https://aistudio.google.com/app/prompts/new_chat.
+
+Do NOT inject the whole userscript into the browser, as the userscript is too big and this will take a long time. Evaluate the exact code snippets you need to test only to see the results.
+
+Evaluate the code used to save the current chat (setup a chat first). Does it work? If not, troubleshoot. Finally, edit the code in the userscript file.
 #+end_verse
 
 * _
-#+begin_verse
-#+end_verse
-
 #+begin_verse
 test your changes using playwright
 #+end_verse

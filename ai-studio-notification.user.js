@@ -15,6 +15,7 @@
     const CONFIG = {
         verbosity: 1,                                    // 0=none, 1=minimal, 2=detailed, 3=very detailed
         onlyIfNotInFocus: false,                         // Only show notification if tab is not in focus
+        NEW_CHAT_MODE: 'click',                            // 'url' or 'click'
         // Notification modes based on minimum duration thresholds
         // Format: { durationSeconds: ['mode1', 'mode2', {speech: 'text'}] }
         // Available modes: 
@@ -142,13 +143,38 @@
         }
     };
 
+    function findButton(text) {
+        return Array.from(document.querySelectorAll('button')).find(btn => {
+            const label = btn.getAttribute('aria-label') || btn.textContent.trim();
+            return label === text;
+        });
+    }
+
     // ============ HOTKEYS ============
     function handleHotkey(event) {
         // Check for Cmd+K on Mac or Ctrl+K on other systems
         if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
             event.preventDefault();
             log(1, '⌨️ Cmd+K pressed, creating new chat');
-            window.location.href = '/app/prompts/new_chat';
+            if (CONFIG.NEW_CHAT_MODE === 'url') {
+                window.location.href = '/app/prompts/new_chat';
+            } else {
+                const newChatButton = findButton('New chat');
+                if (newChatButton) {
+                    newChatButton.click();
+                } else {
+                    log(1, 'Could not find "New chat" button');
+                }
+            }
+        } else if ((event.metaKey || event.ctrlKey) && event.key === 's') {
+            event.preventDefault();
+            log(1, '⌨️ Cmd+S pressed, saving chat');
+            const saveButton = findButton('Save prompt');
+            if (saveButton) {
+                saveButton.click();
+            } else {
+                log(1, 'Could not find "Save prompt" button');
+            }
         }
     }
 
