@@ -2,6 +2,8 @@
 
 * move this repo somewhere good
 
+* @bug When the screen is too small, the "run" or "stop" text is not shown in the button, and our script fails to detect the proper generation state.
+
 * NO also create synthetic magical bell sounds using web api
 
 * DONE add hotkeys =cmd+k= to open a new chat by clicking on the new chat button. preserve current implementation of direct url navigation, and choose between the two using a constant =NEW_CHAT_MODE=.
