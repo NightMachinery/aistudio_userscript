@@ -1,3 +1,91 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.claude/
+  settings.local.json
+ai-studio-notification.user.js
+bells.js
+breadcrumbs.org
+CLAUDE.md
+gen.org
+todo.org
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".claude/settings.local.json">
+{
+  "permissions": {
+    "allow": [
+      "mcp__browsermcp__browser_snapshot",
+      "mcp__browsermcp__browser_click",
+      "mcp__browsermcp__browser_type",
+      "mcp__browsermcp__browser_wait",
+      "mcp__browsermcp__browser_press_key",
+      "mcp__browsermcp__browser_screenshot",
+      "Bash(gh issue create:*)",
+      "mcp__browsermcp__browser_get_console_logs",
+      "Bash(base64:*)",
+      "mcp__playwright__browser_snapshot"
+    ],
+    "deny": [],
+    "defaultMode": "acceptEdits"
+  }
+}
+</file>
+
+<file path="bells.js">
+const BELLS = {
+  'bell-hp3-star-pickup': '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'
+};
+
+export default BELLS;
+</file>
+
+<file path="ai-studio-notification.user.js">
 // ==UserScript==
 // @name         AI Studio Response Notifications
 // @namespace    http://tampermonkey.net/
@@ -203,7 +291,7 @@
         return { show: true, modes };
     }
 
-    function ringBell(bellName) {
+    function playBellNotification(bellName) {
         try {
             const audioContext = new (window.AudioContext || window.webkitAudioContext)();
             
@@ -308,7 +396,7 @@
             if (mode === 'desktop_notif') {
                 showDesktopNotification();
             } else if (BELLS[mode] || BELL_FUNCTIONS[mode]) {
-                ringBell(mode);
+                playBellNotification(mode);
             } else if (typeof mode === 'object' && mode.speech) {
                 playSpeechNotification(mode.speech);
             } else {
@@ -316,29 +404,6 @@
             }
         });
     }
-
-    // ============ CONSOLE/DEBUG EXPORTS ============
-    // Expose a small, namespaced API so you can call helpers from DevTools console.
-    // This keeps the rest of the script encapsulated while enabling easy manual testing.
-    window.AIStudioNotify = {
-        // Play a bell by name: 'simple-beep', 'double-beep', 'triple-beep', 'chime', or any key from BELLS
-        ringBell: (name) => ringBell(name),
-        // Trigger notifications as if a run took N seconds (applies configured thresholds)
-        testNotify: (seconds) => showNotification(Number(seconds) || 0),
-        // Speak a short phrase using speechSynthesis
-        say: (text) => playSpeechNotification(String(text || '')),
-        // Show a desktop notification (permission must be granted)
-        desktopNotif: () => showDesktopNotification(),
-        // Adjust verbosity at runtime (0-3)
-        setVerbosity: (v) => { CONFIG.verbosity = Math.max(0, Math.min(3, Number(v) || 0)); return CONFIG.verbosity; },
-        // Merge partial config overrides at runtime
-        setConfig: (overrides = {}) => Object.assign(CONFIG, overrides),
-        // Inspect available bells and functions
-        listBells: () => ({ fileBells: Object.keys(BELLS), functionBells: Object.keys(BELL_FUNCTIONS) }),
-        // Read current config
-        get config() { return JSON.parse(JSON.stringify(CONFIG)); },
-    };
-    log(2, 'AIStudioNotify API attached to window');
 
     // ============ STATE MONITORING ============
     function checkResponseState() {
@@ -492,3 +557,102 @@
     });
 
 })();
+</file>
+
+<file path="breadcrumbs.org">
+#+TITLE: aistudio_userscript/breadcrumbs
+
+* _
+#+begin_verse
+create a dict of bell names to base64 data. start with `bell-hp3-star-pickup`  from file: '/Users/evar/base/music/greencase/HP3/PC Computer - Harry Potter & the Prisoner of Azkaban - Sound Effects/soundeffects.uax/Magic/pickup_star1..blue..wav'. run bash to get base64.
+#+end_verse
+</file>
+
+<file path="CLAUDE.md">
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This repository contains a userscript that provides notification functionality for Google AI Studio. The script detects when AI model responses are completed and shows desktop notifications and/or plays audio alerts.
+
+## Architecture
+
+### Core Components
+
+**ai-studio-notification.user.js** - A Tampermonkey/Greasemonkey userscript with these main sections:
+
+- **Configuration System**: CONFIG object at the top controls verbosity (0-3), minimum duration thresholds, focus detection, and notification modes
+- **State Machine**: Tracks `isGenerating` state by monitoring DOM button text changes (Run ↔ Stop transitions)
+- **Notification System**: Supports multiple modes - desktop notifications and audio bells using Web Audio API
+- **DOM Monitoring**: Uses both MutationObserver and periodic polling to detect UI state changes
+
+### Key Detection Logic
+
+The script monitors Google AI Studio's Run/Stop button to determine generation state:
+- **AI Generating**: When button text contains "Stop" (`stopButton !== undefined`)
+- **AI Finished**: When no Stop button found and previously was generating
+- **Critical**: Uses `!== undefined` comparison since `.find()` returns `undefined` when no match found
+
+### Configuration Options
+
+Located at top of script in CONFIG object:
+- `verbosity`: 0=none, 1=minimal, 2=detailed, 3=debug spam
+- `minDurationSeconds`: Only notify if generation takes longer than this
+- `onlyIfNotInFocus`: Only show notifications when tab not active
+- `enabledNotificationModes`: Array of ['desktop_notif', 'bell']
+
+## Common Development Tasks
+
+**Testing the Script:**
+1. Install in Tampermonkey/Greasemonkey
+2. Open Google AI Studio (https://aistudio.google.com/)
+3. Send a message to trigger AI response
+4. Check browser console for `[AI Studio Notification]` logs
+
+**Debugging:**
+- Set `verbosity: 3` for detailed logging
+- Monitor console for state transitions and button detection
+- Check notification permissions in browser settings
+
+**Key State Transitions to Monitor:**
+- 🚀 AI generation started (Run → Stop button)
+- ✅ AI generation completed (Stop → Run button)
+- 🔔 Showing notifications (after completion + duration check)
+</file>
+
+<file path="gen.org">
+#+TITLE: aistudio_userscript
+
+* _
+#+begin_verse
+Use browser mcp to connect to the ai studio website (currently open in the  browser). I need you to write a userscript that shows me a notification when  the model finishes responding in ai studio.
+#+end_verse
+</file>
+
+<file path="todo.org">
+#+TITLE: aistudio_userscript/todo
+
+* move this repo somewhere good
+
+* also create synthetic magical bell sounds using web api
+
+* add hotkeys =cmd+k= to open a new chat
+** =cmd+s= to save the current chat
+
+* DONE _
+#+begin_verse
+Allow setting different notification modes for different minumum delays in an object:
+
+{
+ 0: ["bell"],
+ 10: ["bell", "desktop_notif"],
+ 100: ["desktop_notif"],
+}
+
+The code should find the exact duration group and use the modes for that (i.e., should not run 0 delay list when 11 delay).
+#+end_verse
+</file>
+
+</files>

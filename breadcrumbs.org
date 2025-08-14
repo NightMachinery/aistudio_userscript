@@ -2,5 +2,5 @@
 
 * _
 #+begin_verse
-create a dict of bell names to base64 data. start with `bell-hp3-star-pickup`  from file: '/Users/evar/base/music/greencase/HP3/PC Computer - Harry Potter &  the Prisoner of Azkaban - Sound  Effects/soundeffects.uax/Magic/pickup_star1..blue..wav'. run bash to get base64.
+create a dict of bell names to base64 data. start with `bell-hp3-star-pickup`  from file: '/Users/evar/base/music/greencase/HP3/PC Computer - Harry Potter & the Prisoner of Azkaban - Sound Effects/soundeffects.uax/Magic/pickup_star1..blue..wav'. run bash to get base64.
 #+end_verse

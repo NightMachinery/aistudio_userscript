@@ -4,6 +4,9 @@
 
 * also create synthetic magical bell sounds using web api
 
+* add hotkeys =cmd+k= to open a new chat
+** =cmd+s= to save the current chat
+
 * DONE _
 #+begin_verse
 Allow setting different notification modes for different minumum delays in an object:
