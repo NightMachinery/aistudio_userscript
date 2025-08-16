@@ -1,7 +1,5 @@
 #+TITLE: aistudio_userscript/todo
 
-* move this repo somewhere good
-
 * @bug When the screen is too small, the "run" or "stop" text is not shown in the button, and our script fails to detect the proper generation state.
 
 * NO scroll
