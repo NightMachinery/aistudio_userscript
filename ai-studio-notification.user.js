@@ -13,9 +13,10 @@
 
     // ============ CONFIGURATION ============
     const CONFIG = {
-        verbosity: 1,                                    // 0=none, 1=minimal, 2=detailed, 3=very detailed
+        verbosity: 2,                                    // 0=none, 1=minimal, 2=detailed, 3=very detailed
         onlyIfNotInFocus: false,                         // Only show notification if tab is not in focus
         NEW_CHAT_MODE: 'click',                            // 'url' or 'click'
+        // URL reloads the page and is a bit slower, but it is robust to upstream changes.
         // Notification modes based on minimum duration thresholds
         // Format: { durationSeconds: ['mode1', 'mode2', {speech: 'text'}] }
         // Available modes: 
@@ -159,7 +160,7 @@
             if (CONFIG.NEW_CHAT_MODE === 'url') {
                 window.location.href = '/app/prompts/new_chat';
             } else {
-                const newChatButton = findButton('New chat');
+                const newChatButton = findButton('Chat') || findButton('New chat') || findButton('add');
                 if (newChatButton) {
                     newChatButton.click();
                 } else {

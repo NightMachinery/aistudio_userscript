@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__browsermcp__browser_snapshot",
+      "mcp__browsermcp__browser_click",
+      "mcp__browsermcp__browser_type",
+      "mcp__browsermcp__browser_wait",
+      "mcp__browsermcp__browser_press_key",
+      "mcp__browsermcp__browser_screenshot",
+      "Bash(gh issue create:*)",
+      "mcp__browsermcp__browser_get_console_logs",
+      "Bash(base64:*)",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_console_messages",
+      "Bash(jscodeshift:*)",
+      "WebFetch(domain:aistudio.google.com)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_press_key"
+    ],
+    "deny": [],
+    "defaultMode": "acceptEdits"
+  }
+}
